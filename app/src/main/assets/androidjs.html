@@ -1,0 +1,55 @@
+<html>
+<head>
+    <style>
+        body{
+        background-color: #FA5858;
+        color:#fff;
+        }
+        input{
+        background-color: #F7D358;
+        width: 300px;
+        padding:10px;
+        color: #000;
+        }
+        div#content{
+        padding:20px;
+        background-color: #F7D358;
+        color: #000;
+        }
+    </style>
+    <script type="text/javascript">
+        function showAndroidToast(toastmsg) {
+            app.showToast(toastmsg);
+        }
+        function showAndroidDialog(dialogmsg) {
+            app.showDialog(dialogmsg);
+        }
+        function moveToScreenTwo() {
+            app.moveToNextScreen();
+        }
+
+        function testCall(msg) {
+            app.showToast("TEST: " + msg);
+        }
+
+    </script>
+</head>
+<body>
+<center>
+    <h3>Binding JavaScript code to Android code</h3>
+    <div id="content">
+        Calls between java code and js
+    </div>
+    <div>
+        Here are few examples:
+    </div>
+    <div>
+        <input type="button" value="Make Toast"
+               onClick="showAndroidToast('Toast made by Javascript :)')"/><br/>
+        <input type="button" value="Trigger Dialog"
+               onClick="showAndroidDialog('This dialog is triggered by Javascript :)')"/><br/>
+        <input type="button" value="Take me to Next Screen" onClick="moveToScreenTwo()"/>
+    </div>
+</center>
+</body>
+</html>
